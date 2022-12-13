@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import styles from './Header.module.scss';
 import { HeaderProps } from './Header.props';
 import cn from 'classnames';

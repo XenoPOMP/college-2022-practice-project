@@ -1,8 +1,8 @@
 import { combineReducers, createStore } from 'redux';
-import { sampleReducer } from './reducer-list';
+import { layoutReducer } from './reducer-list';
 
 const rootReducer = combineReducers({
-  sample: sampleReducer,
+  layout: layoutReducer,
 });
 
 export const store = createStore(rootReducer);

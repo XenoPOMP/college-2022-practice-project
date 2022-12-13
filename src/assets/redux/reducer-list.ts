@@ -1,3 +1,3 @@
-import { sampleReducer } from './reducers/sampleReducer';
+import { layoutReducer } from './reducers/layoutReducer';
 
-export { sampleReducer };
+export { layoutReducer };

@@ -1,6 +1,9 @@
-const defaultState = {};
+const defaultState = {
+  header: 0,
+  footer: 0,
+};
 
-export const sampleReducer = (
+export const layoutReducer = (
   state = defaultState,
   action: { type: string, payload: any },
 ) => {

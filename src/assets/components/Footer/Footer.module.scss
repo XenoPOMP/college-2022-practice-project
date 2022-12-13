@@ -1,0 +1,68 @@
+@import "./src/assets/styles/uiGrid";
+@import "./src/assets/styles/flexCenter";
+@import "./src/assets/styles/fontStyles";
+
+footer.appFooter {
+  @extend %uiGrid;
+  @extend %textFont;
+  padding: 60px var(--grid-gap);
+  background: #313131;
+  font-size: 25px;
+  color: white;
+
+  .container {
+    .companyTitle, .year {
+      grid-column-start: 1;
+      grid-column-end: 13;
+      @extend %flexCenter;
+      margin-bottom: 1.2em;
+    }
+
+    label {
+      @extend %flexCenter;
+    }
+
+    label.socialMedia {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    .logo {
+      width: 100%;
+      @extend %flexCenter;
+      padding: 1.12em 0;
+      cursor: pointer;
+
+      &:hover {
+        svg path {
+          fill: white;
+        }
+      }
+
+      svg {
+        height: 1.2em;
+        transition: .15s ease;
+
+        path {
+          fill: #B9B6B6;
+          transition: inherit;
+        }
+      }
+    }
+
+    .logo.vk {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    .logo.tg {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .logo.yt {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+  }
+}
