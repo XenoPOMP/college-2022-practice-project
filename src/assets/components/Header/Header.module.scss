@@ -1,0 +1,28 @@
+@import "./src/assets/styles/uiGrid";
+@import "./src/assets/styles/flexCenter";
+@import "./src/assets/styles/fontStyles";
+
+header.appHeader {
+  @extend %uiGrid;
+  font-size: 20px;
+  height: 66px;
+  @extend %headerFont;
+  position: sticky;
+  top: 0;
+
+  .container {
+    height: 100%;
+
+    .cell {
+      @extend %flexCenter;
+      // border: 2px solid black;
+    }
+
+    .logo {
+      font-size: 1.75em;
+      color: #BEBEBE;
+      font-weight: bold;
+      user-select: none;
+    }
+  }
+}

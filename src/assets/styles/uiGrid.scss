@@ -1,3 +1,22 @@
+@import "./src/assets/styles/flexCenter";
+
 %uiGrid {
+  --grid-padding: 15px;
+  --grid-gap: 15px;
+  --grid-column-count: 12;
+  --grid-row-count: 1;
+
   width: 100%;
+  @extend %flexCenter;
+  padding: 0 var(--grid-gap);
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-column-count), 1fr);
+    grid-template-rows: repeat(var(--grid-row-count), 1fr);
+    grid-column-gap: var(--grid-gap);
+    grid-row-gap: var(--grid-gap);
+    max-width: 1440px;
+  }
 }
