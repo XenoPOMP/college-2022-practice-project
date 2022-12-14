@@ -9,6 +9,7 @@ header.appHeader {
   @extend %headerFont;
   position: sticky;
   top: 0;
+  background: white;
 
   .container {
     height: 100%;
@@ -19,6 +20,7 @@ header.appHeader {
     }
 
     .logo {
+      justify-content: start;
       font-size: 1.75em;
       color: #BEBEBE;
       font-weight: bold;
