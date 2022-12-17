@@ -1,0 +1,17 @@
+@import './src/assets/styles/fontStyles';
+
+.button {
+  background: #F47935;
+  @extend %textFont;
+  padding: .875em 2.75em;
+  border-radius: 52px;
+  border: none;
+  outline: none;
+  transition: .25s ease;
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    filter: brightness(.9);
+  }
+}

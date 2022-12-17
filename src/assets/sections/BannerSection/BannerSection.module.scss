@@ -1,0 +1,41 @@
+@import "./src/assets/styles/fontStyles";
+
+.section {
+  background: url("./src/assets/images/Top banner.png");
+  background-size: cover;
+  background-position: center;
+  font-size: 18px;
+
+  .box {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    min-height: 68px;
+    background: white;
+    border-radius: 1.778em;
+    padding: 1.111em 1.111em 0;
+
+    h2 {
+      @extend %titleFont;
+      font-size: 3em;
+      font-weight: var(--semiBold);
+    }
+
+    .text {
+      @extend %textFont;
+      font-size: 1em;
+      font-weight: var(--regular);
+      margin-top: .944em;
+      margin-bottom: 2.944em;
+    }
+
+    .button {
+      font-size: .889em;
+      text-transform: uppercase;
+      font-weight: var(--bold);
+      line-height: 18px;
+      letter-spacing: 0.035em;
+      text-align: center;
+      margin-bottom: 2.83em;
+    }
+  }
+}
