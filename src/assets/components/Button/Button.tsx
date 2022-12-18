@@ -3,25 +3,16 @@ import { ButtonProps } from './Button.props';
 import styles from './Button.module.scss';
 import cn from 'classnames';
 
-const Button: FC<ButtonProps> = ({ children, className, type }) => {
+const Button: FC<ButtonProps> = ({ children, className, link, callback }) => {
   return (
     <button
       className={cn(className, styles.button)}
       onClick={() => {
-        switch (type) {
-          case 'link': {
-            console.log('Type is link');
-            break;
-          }
-          case 'callback': {
-            console.log('Type is callback');
-            break;
-          }
-        }
+        // Invoke callback
+        callback && callback();
       }}
     >
-      {children}{' '}
-      {(type === 'callback' && '(callback)') || (type === 'link' && '(link)')}
+      {children}
     </button>
   );
 };

@@ -17,9 +17,7 @@ const BannerSection = () => {
           neque egestas congue quisque egestas diam.
         </div>
 
-        <Button className={cn(styles.button)} type={'link'}>
-          Узнать больше
-        </Button>
+        <Button className={cn(styles.button)}>Узнать больше</Button>
       </div>
     </Section>
   );
