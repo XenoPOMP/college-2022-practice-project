@@ -1,4 +1,3 @@
-import React from 'react';
 import Page from '../../components/Page/Page';
 import BannerSection from '../../sections/BannerSection/BannerSection';
 import AboutSection from '../../sections/AboutSection/AboutSection';
