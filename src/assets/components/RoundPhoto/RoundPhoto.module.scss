@@ -2,14 +2,6 @@
   border: 2px solid black;
   background: red;
   width: 100%;
-
-  img {
-    width: 100%;
-    aspect-ratio: 1 / 2;
-  }
-
-  &.left {
-  }
-
-  &.right {}
+  aspect-ratio: 1 / 2;
+  overflow: hidden;
 }

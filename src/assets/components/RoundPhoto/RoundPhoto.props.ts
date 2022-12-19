@@ -1,7 +1,7 @@
 export interface RoundPhotoProps {
-  photo: {
-    src?: string,
+  src?: string;
+  className?: {
+    container?: string,
+    image?: string,
   };
-  className?: string;
-  round: 'left' | 'right';
 }

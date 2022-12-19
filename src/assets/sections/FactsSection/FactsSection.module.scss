@@ -1,8 +1,16 @@
+@import "./src/assets/styles/flexCenter";
+
 .section {
   background: white;
 
   .photo {
     grid-column-start: 1;
     grid-column-end: 4;
+    @extend %flexCenter;
+
+    .image {
+      margin-left: 60%;
+      height: 100%;
+    }
   }
 }

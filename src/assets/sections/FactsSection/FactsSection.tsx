@@ -3,15 +3,14 @@ import Section from '../../components/Section/Section';
 import styles from './FactsSection.module.scss';
 import cn from 'classnames';
 import RoundPhoto from '../../components/RoundPhoto/RoundPhoto';
-import manLooking from '../../images/facts_man_looking.png';
+import manLookingFull from '../../images/Daily-Report.jpg';
 
 const FactsSection = () => {
   return (
     <Section className={cn(styles.section)}>
       <RoundPhoto
-        round={'left'}
-        photo={{ src: manLooking }}
-        className={cn(styles.photo)}
+        src={manLookingFull}
+        className={{ container: cn(styles.photo), image: cn(styles.image) }}
       />
     </Section>
   );
