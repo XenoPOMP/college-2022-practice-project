@@ -1,6 +1,14 @@
 .round {
-  border: 2px solid black;
   width: 100%;
   aspect-ratio: 1 / 2;
   overflow: hidden;
+  user-select: none;
+
+  &.left {
+    clip-path: circle(62.5% at 100% 50%);
+  }
+
+  &.right {
+    clip-path: circle(62.5% at 0 50%);
+  }
 }

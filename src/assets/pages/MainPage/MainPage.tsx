@@ -12,7 +12,9 @@ const MainPage = () => {
   return (
     <Page meta={{ pageTitle: 'Main', pageDescription: '', keywords: '' }}>
       <BannerSection />
+
       <FactsSection />
+
       <AboutSection />
       <KeyFeaturesSection />
       <WeBelieveSection />

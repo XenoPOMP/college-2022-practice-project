@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { PageProps } from './Page.props';
 import Layout from '../Layout/Layout';
 import MetaTitle from '../MetaTitle/MetaTitle';

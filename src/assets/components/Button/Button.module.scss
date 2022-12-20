@@ -10,8 +10,9 @@
   transition: .25s ease;
   color: white;
   cursor: pointer;
+  user-select: none;
 
   &:active {
-    filter: brightness(.9);
+    filter: brightness(.8);
   }
 }
