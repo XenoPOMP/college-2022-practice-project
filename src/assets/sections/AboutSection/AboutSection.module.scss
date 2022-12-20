@@ -1,3 +1,71 @@
+@import "./src/assets/styles/fontStyles";
+@import "./src/assets/styles/fontWeights";
+@import "./src/assets/styles/flexCenter";
+
 .section {
   background: #353434;
+  font-size: 20px;
+  color: white;
+
+  h2 {
+    @extend %titleFont;
+    font-size: 3.3em;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    font-weight: var(--bold);
+  }
+
+  .photo {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+
+  .button {
+    font-size: 1.75em;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .orangeBlock {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 10;
+    background: #F47935;
+    border-radius: 1.6em;
+    @extend %textFont;
+    padding: 0 1.9em;
+
+    h3 {
+      font-weight: var(--bold);
+      font-size: 1.25em;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 3.1em 0;
+    }
+
+    .content {
+      font-size: 1em;
+      font-weight: var(--regular);
+      @extend %flexCenter;
+      text-align: center;
+    }
+  }
+
+  .underPhotoText {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 8;
+    grid-row-end: 11;
+    font-size: 1em;
+    font-weight: var(--regular);
+    @extend %textFont;
+  }
 }

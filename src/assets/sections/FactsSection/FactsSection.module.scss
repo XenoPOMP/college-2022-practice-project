@@ -1,23 +1,21 @@
 @import "./src/assets/styles/flexCenter";
 @import "./src/assets/styles/uiGrid";
+@import "./src/assets/styles/fontStyles";
+@import "./src/assets/styles/fontWeights";
 
 .section {
   background: white;
+  font-size: 18px;
 
   .photo {
     grid-column-start: 1;
     grid-column-end: 4;
-    @extend %flexCenter;
-
-    .image {
-      margin-left: 75%;
-      height: 100%;
-    }
   }
 
   .text {
     --grid-column-count: 9;
     --grid-row-count: 2;
+    @extend %textFont;
 
     @extend %uiGrid;
     width: 100%;
@@ -31,12 +29,37 @@
       height: 100%;
 
       .block {
-        border: 2px solid black;
+
+        &.orangeBlock, &.blackBlock {
+          border-radius: 1.777em;
+          padding: 1.667em;
+
+          h2 {
+            width: 100%;
+            font-size: 1.389em;
+            letter-spacing: 0.035em;
+            text-align: center;
+            margin-top: .055em;
+            margin-bottom: .33em;
+            font-weight: var(--bold);
+          }
+
+          .content {
+            margin-bottom: 1.5em;
+            font-size: 1em;
+            font-weight: var(--regular);
+          }
+        }
 
         &.orangeBlock {
           grid-column-start: 2;
           grid-column-end: 5;
-          background: orange;
+          background: #F47935;
+          color: white;
+
+          h2 {
+            text-transform: uppercase;
+          }
         }
 
         &.orangeBlockText {
@@ -52,11 +75,17 @@
           grid-column-end: 9;
           grid-row-start: 2;
           grid-row-end: 3;
+          color: white;
         }
 
         &.blackBlockText {
           grid-column-start: 6;
           grid-column-end: 9;
+          display: flex;
+
+          span {
+            align-self: flex-end;
+          }
         }
       }
     }

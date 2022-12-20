@@ -1,4 +1,5 @@
 @import './src/assets/styles/fontStyles';
+@import "./src/assets/styles/fontWeights";
 
 .button {
   background: #F47935;
@@ -11,6 +12,9 @@
   color: white;
   cursor: pointer;
   user-select: none;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  font-weight: var(--bold);
 
   &:active {
     filter: brightness(.8);

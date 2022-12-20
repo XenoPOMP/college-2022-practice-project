@@ -16,6 +16,7 @@ const MainPage = () => {
       <FactsSection />
 
       <AboutSection />
+
       <KeyFeaturesSection />
       <WeBelieveSection />
       <EarningSinceSection />
