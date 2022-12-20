@@ -4,6 +4,4 @@ export interface RoundPhotoProps {
     container?: string,
     image?: string,
   };
-  fullWidth?: true
-  fullHeight?: true
 }

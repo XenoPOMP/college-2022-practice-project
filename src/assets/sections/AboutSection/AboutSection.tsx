@@ -11,11 +11,7 @@ const AboutSection = () => {
     <Section className={cn(styles.section)} grid={{ rows: 10 }}>
       <h2>Наша компания предоставляет услуги генерального подрядчика</h2>
 
-      <RoundPhoto
-        fullHeight
-        className={{ container: cn(styles.photo) }}
-        src={womanImg}
-      />
+      <RoundPhoto className={{ container: cn(styles.photo) }} src={womanImg} />
 
       <Button className={cn(styles.button)}>Узнать больше</Button>
 

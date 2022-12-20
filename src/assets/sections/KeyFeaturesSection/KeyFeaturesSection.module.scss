@@ -1,0 +1,132 @@
+@import "./src/assets/styles/fontStyles";
+@import "./src/assets/styles/fontWeights";
+@import "./src/assets/styles/flexCenter";
+@import "./src/assets/styles/uiGrid";
+
+.section {
+  position: relative;
+  font-size: 35px;
+  color: white;
+  background: url("./src/assets/images/image_3.jpg");
+  background-size: contain;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    // z-index: -10;
+  }
+
+  .head {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    text-align: center;
+    z-index: 1;
+
+    h2 {
+      @extend %titleFont;
+      font-size: 2.257em;
+      font-weight: var(--semiBold);
+      text-transform: uppercase;
+      margin-bottom: 1.286em;
+    }
+
+    i {
+      font-size: 1em;
+      @extend %textFont;
+      font-weight: var(--regular);
+      // margin-bottom: 1.714em;
+    }
+  }
+
+  .cards {
+    margin-top: 1.286em;
+    @extend %uiGrid;
+    padding: 0;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    z-index: 1;
+
+    .container {
+      --grid-column-count: 2;
+      --grid-row-count: 2;
+      min-height: 100px;
+
+      .card {
+        border-radius: 2.8em;
+        background: white;
+        box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.14);
+        padding: 1.657em;
+        color: black;
+
+        svg {
+          width: 5.229em;
+          aspect-ratio: 1;
+          @extend %flexCenter;
+          margin: 0 auto;
+        }
+
+        h3 {
+          font-weight: var(--semiBold);
+          font-size: 1.314em;
+          @extend %titleFont;
+          margin-top: 1.826em;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        .content {
+          font-size: 1em;
+          font-weight: var(--regular);
+          @extend %textFont;
+          text-align: center;
+          margin-top: .714em;
+          margin-bottom: 5.685em;
+        }
+
+        .more {
+          @extend %flexCenter;
+          font-size: 1em;
+
+          button {
+            @extend %textFont;
+            font-weight: var(--bold);
+            text-transform: uppercase;
+            font-size: .771em;
+            padding: 0 2.142em;
+            letter-spacing: 0.035em;
+            position: relative;
+            background: none;
+            outline: none;
+            border: none;
+            user-select: none;
+            cursor: pointer;
+            transition: .1s ease-in;
+
+            &:hover {
+              &:after {
+                bottom: -6px;
+              }
+            }
+
+            &:after {
+              transition: inherit;
+              position: absolute;
+              content: "";
+              left: 0;
+              bottom: -2px;
+              width: 100%;
+              height: 2px;
+              background: #D0C8BD;
+            }
+          }
+        }
+      }
+    }
+  }
+}

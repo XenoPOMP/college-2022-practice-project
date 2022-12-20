@@ -18,6 +18,7 @@ const MainPage = () => {
       <AboutSection />
 
       <KeyFeaturesSection />
+
       <WeBelieveSection />
       <EarningSinceSection />
       <ReviewSection />

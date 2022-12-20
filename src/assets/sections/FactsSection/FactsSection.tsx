@@ -10,7 +10,6 @@ const FactsSection = () => {
       <RoundPhoto
         src={manLooking}
         className={{ container: cn(styles.photo), image: cn(styles.image) }}
-        fullWidth
       />
 
       <div className={cn(styles.text)}>
