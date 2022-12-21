@@ -1,0 +1,46 @@
+@import "./src/assets/styles/fontStyles";
+@import "./src/assets/styles/fontWeights";
+@import "./src/assets/styles/flexCenter";
+
+.section {
+  font-size: 30px;
+
+  .photo {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+
+  .text {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    height: 100%;
+    @extend %flexCenter;
+    flex-direction: column;
+    font-size: 1em;
+
+    h2 {
+      @extend %titleFont;
+      font-weight: var(--semiBold);
+      font-size: 1.733em;
+    }
+
+    .underHeaderText {
+      font-size: 1em;
+      font-weight: var(--regular);
+      @extend %textFont;
+      margin: 1.5em 0;
+    }
+
+    .buttonPlaceholder {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+
+      .button {
+        width: 75%;
+        font-size: 1em;
+      }
+    }
+  }
+
+}

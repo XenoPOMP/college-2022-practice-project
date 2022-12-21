@@ -1,3 +1,7 @@
 @import "./src/assets/styles/nullstyles";
 @import "./src/assets/styles/fonts";
 @import "./src/assets/styles/fontWeights";
+
+body {
+  overflow-x: hidden;
+}

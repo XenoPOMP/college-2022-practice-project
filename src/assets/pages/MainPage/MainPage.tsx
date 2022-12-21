@@ -20,6 +20,7 @@ const MainPage = () => {
       <KeyFeaturesSection />
 
       <WeBelieveSection />
+
       <EarningSinceSection />
       <ReviewSection />
       <ContactSection />

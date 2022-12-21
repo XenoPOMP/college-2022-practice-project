@@ -2,10 +2,17 @@ import React from 'react';
 import Section from '../../components/Section/Section';
 import styles from './KeyFeaturesSection.module.scss';
 import cn from 'classnames';
+import backgroundImg from '../../images/image_3.jpg';
 
 const KeyFeaturesSection = () => {
   return (
-    <Section className={cn(styles.section)}>
+    <Section
+      className={cn(styles.section)}
+      sx={{
+        background: `url(${backgroundImg})`,
+        backgroundSize: 'contain',
+      }}
+    >
       <div className={cn(styles.head)}>
         <h2>Ключевые особности</h2>
 

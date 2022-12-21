@@ -4,10 +4,19 @@ import styles from './BannerSection.module.scss';
 import cn from 'classnames';
 import Button from '../../components/Button/Button';
 import { motion } from 'framer-motion';
+import backgroundImg from '../../images/banner_desktop.png';
 
 const BannerSection = () => {
   return (
-    <Section className={cn(styles.section)}>
+    <Section
+      className={cn(styles.section)}
+      sx={{
+        background: `url(${backgroundImg})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'auto 100%',
+      }}
+    >
       <motion.div
         className={cn(styles.box)}
         initial={{ x: '-25%', opacity: 0.15 }}

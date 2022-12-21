@@ -4,8 +4,9 @@ import styles from './Section.module.scss';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 
-const Section: FC<SectionProps> = forwardRef(({ children, className, grid }, ref) => {
-  const getGridSize = () : CSSProperties => {
+const Section: FC<SectionProps> = forwardRef(({ children, className, grid, sx }, ref) => {
+  const getSectionStyles = () : CSSProperties => {
+    // Setup grid
     let gridSx = {};
 
     if (grid) {
@@ -14,15 +15,22 @@ const Section: FC<SectionProps> = forwardRef(({ children, className, grid }, ref
       if (grid.cols) gridSx = {...gridSx, '--grid-column-count': grid.cols}
     }
 
+    // Merge grid styles and props styles
+    gridSx = {...gridSx, ...sx};
+
     return gridSx as CSSProperties;
   }
 
   useEffect(() => {
-    getGridSize();
+    getSectionStyles();
   }, [])
 
   return (
-    <section className={cn(styles.uiSection, className)} style={getGridSize()} ref={ref as Ref<any>}>
+    <section
+      className={cn(styles.uiSection, className)}
+      style={getSectionStyles()}
+      ref={ref as Ref<any>}
+    >
       <div className={cn(styles.container)}>{children}</div>
     </section>
   );
