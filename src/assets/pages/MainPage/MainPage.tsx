@@ -24,6 +24,7 @@ const MainPage = () => {
       <EarningSinceSection />
 
       <ReviewSection />
+
       <ContactSection />
     </Page>
   );

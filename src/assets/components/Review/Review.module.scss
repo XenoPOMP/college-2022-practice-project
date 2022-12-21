@@ -1,0 +1,54 @@
+@import "./src/assets/styles/fontStyles";
+@import "./src/assets/styles/fontWeights";
+@import "./src/assets/styles/flexCenter";
+@import "./src/assets/styles/uiGrid";
+
+.review {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  font-size: 25px;
+  @extend %uiGrid;
+  padding: 0;
+  background: #282A30;
+  border-radius: 1.4em;
+
+  .container {
+    height: 100%;
+
+    .avatarBlock {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding: 1em;
+      @extend %flexCenter;
+      align-items: start;
+
+      .avatar {
+        width: 68%;
+        aspect-ratio: 1;
+        background: white;
+        border-radius: 50%;
+      }
+    }
+
+    .body {
+      grid-column-start: 4;
+      grid-column-end: 13;
+      border-radius: 1.4em;
+      background: #F47935;
+      padding: 1.2em;
+      color: white;
+      @extend %textFont;
+
+      h3 {
+        font-size: 1.2em;
+        font-weight: var(--bold);
+        margin-bottom: 1em;
+      }
+
+      .content {
+        font-size: 1em;
+        font-weight: var(--regular);
+      }
+    }
+  }
+}
