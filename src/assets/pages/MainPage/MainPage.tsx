@@ -22,6 +22,7 @@ const MainPage = () => {
       <WeBelieveSection />
 
       <EarningSinceSection />
+
       <ReviewSection />
       <ContactSection />
     </Page>

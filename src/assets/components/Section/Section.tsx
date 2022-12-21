@@ -21,10 +21,6 @@ const Section: FC<SectionProps> = forwardRef(({ children, className, grid, sx },
     return gridSx as CSSProperties;
   }
 
-  useEffect(() => {
-    getSectionStyles();
-  }, [])
-
   return (
     <section
       className={cn(styles.uiSection, className)}

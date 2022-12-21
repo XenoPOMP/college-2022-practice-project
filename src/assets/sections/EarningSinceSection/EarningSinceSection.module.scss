@@ -1,3 +1,66 @@
+@import "./src/assets/styles/fontStyles";
+@import "./src/assets/styles/fontWeights";
+@import "./src/assets/styles/flexCenter";
+
 .section {
   background: #282A30;
+  font-size: 26px;
+
+  .since {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    background: white;
+    z-index: 3;
+    border-radius: 1.231em;
+    @extend %flexCenter;
+    padding: 2.308em 1.154em;
+    flex-direction: column;
+    align-items: start;
+    font-size: 1em;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.19);
+
+    h2 {
+      @extend %titleFont;
+      font-weight: var(--semiBold);
+      font-size: 2.231em;
+      margin-bottom: 1.808em;
+    }
+
+    .button {
+      font-size: 1em;
+    }
+  }
+
+  .circle {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    grid-column-start: 6;
+    grid-column-end: 10;
+
+    &.orange {
+      background: #F47935;
+      grid-row-start: 1;
+      grid-row-end: 5;
+      z-index: 0;
+    }
+
+    &.photo {
+      background: white;
+      grid-row-start: 5;
+      grid-row-end: 8;
+      z-index: 2;
+      grid-column-start: 6;
+      grid-column-end: 10;
+    }
+  }
+
+  .roundPhoto {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 7;
+    z-index: 1;
+  }
 }
