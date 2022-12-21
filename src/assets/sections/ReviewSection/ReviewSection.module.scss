@@ -15,4 +15,11 @@
     margin-bottom: .57em;
     font-size: 3.16em;
   }
+
+  .pagination {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    margin-top: 2.4em;
+    @extend %flexCenter
+  }
 }
