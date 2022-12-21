@@ -1,0 +1,32 @@
+@import "./src/assets/styles/fontStyles";
+@import "./src/assets/styles/fontWeights";
+@import "./src/assets/styles/flexCenter";
+
+.container {
+  width: 100%;
+
+  .label {
+    font-size: 1.2em;
+    margin-bottom: .5em;
+    font-weight: var(--bold);
+    @extend %textFont;
+  }
+
+  input, textarea {
+    // 25
+    @extend %textFont;
+    font-size: 1em;
+    padding: .48em 1.2em;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #F47935;
+    outline: none;
+    margin-bottom: 1.2em;
+  }
+
+  textarea {
+    max-height: 350px;
+  }
+}
