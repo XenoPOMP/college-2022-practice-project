@@ -3,11 +3,17 @@ import Section from '../../components/Section/Section';
 import styles from './BannerSection.module.scss';
 import cn from 'classnames';
 import Button from '../../components/Button/Button';
+import { motion } from 'framer-motion';
 
 const BannerSection = () => {
   return (
     <Section className={cn(styles.section)}>
-      <div className={cn(styles.box)}>
+      <motion.div
+        className={cn(styles.box)}
+        initial={{ x: '-25%', opacity: 0.15 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+      >
         <h2>Наши услуги</h2>
 
         <div className={cn(styles.text)}>
@@ -18,7 +24,7 @@ const BannerSection = () => {
         </div>
 
         <Button className={cn(styles.button)}>Узнать больше</Button>
-      </div>
+      </motion.div>
     </Section>
   );
 };

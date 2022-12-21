@@ -1,9 +1,10 @@
-import { CSSProperties, FC, useEffect } from 'react';
+import { CSSProperties, FC, useEffect, forwardRef, Ref } from 'react';
 import { SectionProps } from './Section.props';
 import styles from './Section.module.scss';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 
-const Section: FC<SectionProps> = ({ children, className, grid }) => {
+const Section: FC<SectionProps> = forwardRef(({ children, className, grid }, ref) => {
   const getGridSize = () : CSSProperties => {
     let gridSx = {};
 
@@ -21,10 +22,12 @@ const Section: FC<SectionProps> = ({ children, className, grid }) => {
   }, [])
 
   return (
-    <section className={cn(styles.uiSection, className)} style={getGridSize()}>
+    <section className={cn(styles.uiSection, className)} style={getGridSize()} ref={ref as Ref<any>}>
       <div className={cn(styles.container)}>{children}</div>
     </section>
   );
-};
+});
+
+export const MotionSection = motion(Section);
 
 export default Section;

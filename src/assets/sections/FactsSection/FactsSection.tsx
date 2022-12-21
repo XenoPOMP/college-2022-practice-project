@@ -1,20 +1,59 @@
-import Section from '../../components/Section/Section';
+import Section, { MotionSection } from '../../components/Section/Section';
 import styles from './FactsSection.module.scss';
 import cn from 'classnames';
-import RoundPhoto from '../../components/RoundPhoto/RoundPhoto';
+import RoundPhoto, {
+  MotionRoundPhoto,
+} from '../../components/RoundPhoto/RoundPhoto';
 import manLooking from '../../images/facts_man_looking.png';
+import { motion } from 'framer-motion';
 
 const FactsSection = () => {
+  type animationLayout = {
+    hidden: {},
+    visible: {},
+  }
+
+
+  const photoAnimation = {
+    hidden: {opacity: 0},
+    visible: {opacity: 1},
+  } as animationLayout;
+
+  const orangeAnim = {
+    hidden: {opacity: 0, y: '-25%'},
+    visible: {opacity: 1, y: '0%'},
+  } as animationLayout;
+
+  const blackAnim = {
+    hidden: {opacity: 0, y: '25%'},
+    visible: {opacity: 1, y: '0%'},
+  } as animationLayout;
+
+  const defaultTransition = {
+    duration: 1,
+    ease: 'easeOut'
+  }
+
   return (
-    <Section className={cn(styles.section)}>
-      <RoundPhoto
+    <MotionSection
+      className={cn(styles.section)}
+      initial={'hidden'}
+      whileInView={'visible'}
+    >
+      <MotionRoundPhoto
         src={manLooking}
         className={{ container: cn(styles.photo), image: cn(styles.image) }}
+        variants={photoAnimation}
+        transition={{duration: defaultTransition.duration, ease: defaultTransition.ease}}
       />
 
       <div className={cn(styles.text)}>
         <div className={cn(styles.container)}>
-          <div className={cn(styles.block, styles.orangeBlock)}>
+          <motion.div
+            className={cn(styles.block, styles.orangeBlock)}
+            variants={orangeAnim}
+            transition={{duration: defaultTransition.duration, ease: defaultTransition.ease, delay: 1}}
+          >
             <h2>Заголовок</h2>
 
             <div className={cn(styles.content)}>
@@ -27,8 +66,12 @@ const FactsSection = () => {
               pharetra et ultrices. Quis vel eros donec ac odio tempor orci
               dapibus ultrices.
             </div>
-          </div>
-          <div className={cn(styles.block, styles.orangeBlockText)}>
+          </motion.div>
+          <motion.div
+            className={cn(styles.block, styles.orangeBlockText)}
+            variants={orangeAnim}
+            transition={{duration: defaultTransition.duration, ease: defaultTransition.ease, delay: 1}}
+          >
             Nisl nisi scelerisque eu ultrices. Lobortis scelerisque fermentum
             dui faucibus in ornare quam viverra. Fringilla ut morbi tincidunt
             augue interdum velit euismod in. Dolor magna eget est lorem ipsum.
@@ -36,8 +79,12 @@ const FactsSection = () => {
             proin nibh nisl. Non blandit massa enim nec dui nunc mattis enim ut.
             Quis enim lobortis scelerisque fermentum dui. Fames ac turpis
             egestas integer eget aliquet nibh praesent tristique.
-          </div>
-          <div className={cn(styles.block, styles.blackBlockText)}>
+          </motion.div>
+          <motion.div
+            className={cn(styles.block, styles.blackBlockText)}
+            variants={blackAnim}
+            transition={{duration: defaultTransition.duration, ease: defaultTransition.ease, delay: 2}}
+          >
             <span>
               Nisl nisi scelerisque eu ultrices. Lobortis scelerisque fermentum
               dui faucibus in ornare quam viverra. Fringilla ut morbi tincidunt
@@ -47,8 +94,12 @@ const FactsSection = () => {
               ut. Quis enim lobortis scelerisque fermentum dui. Fames ac turpis
               egestas integer eget aliquet nibh praesent tristique.
             </span>
-          </div>
-          <div className={cn(styles.block, styles.blackBlock)}>
+          </motion.div>
+          <motion.div
+            className={cn(styles.block, styles.blackBlock)}
+            variants={blackAnim}
+            transition={{duration: defaultTransition.duration, ease: defaultTransition.ease, delay: 2}}
+          >
             <h2>Заголовок, но без капса</h2>
 
             <div className={cn(styles.content)}>
@@ -59,10 +110,10 @@ const FactsSection = () => {
               ultricies leo integer malesuada. Amet purus gravida quis blandit
               turpis cursus.
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </Section>
+    </MotionSection>
   );
 };
 
